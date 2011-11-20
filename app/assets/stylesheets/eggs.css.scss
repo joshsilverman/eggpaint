@@ -1,0 +1,24 @@
+input {
+  border: 1px solid #DDD;
+  background: #EEE url(ui-bg_highlight-soft_100_eeeeee_1x100.png) 50% top repeat-x;
+  color: #333;
+  width:170px;
+}
+
+.image {
+  position:relative;
+  height:154px;
+  margin-left:28px;
+  
+  #icon {
+    position:absolute;
+    top:44px;
+    left:25px;
+    max-width:60px;
+  }
+  
+}
+
+canvas {
+  display:none;
+}

@@ -1,0 +1,16 @@
+= form_for @egg do |f|
+  -if @egg.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@egg.errors.count, "error")} prohibited this egg from being saved:"
+      %ul
+        - @egg.errors.full_messages.each do |msg|
+          %li= msg
+  //.actions= f.submit 'Save'
+
+.image
+  %canvas{:id => :egg}
+  = image_tag "icons/Car.png", :id => :icon
+
+#palette
+.field
+  %input#search{:placeholder => "search for an image"}

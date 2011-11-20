@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @egg.name
+
+= link_to 'Edit', edit_egg_path(@egg)
+\|
+= link_to 'Back', eggs_path

@@ -1,0 +1,16 @@
+= form_for @icon do |f|
+  -if @icon.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@icon.errors.count, "error")} prohibited this icon from being saved:"
+      %ul
+        - @icon.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :term
+    = f.text_field :term
+  .field
+    = f.label :filename
+    = f.text_field :filename
+  .actions
+    = f.submit 'Save'

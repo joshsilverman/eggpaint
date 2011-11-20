@@ -1,0 +1,19 @@
+%h1 Listing eggs
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @eggs.each do |egg|
+    %tr
+      %td= egg.name
+      %td= link_to 'Show', egg
+      %td= link_to 'Edit', edit_egg_path(egg)
+      %td= link_to 'Destroy', egg, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Egg', new_egg_path

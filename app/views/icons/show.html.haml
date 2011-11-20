@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Term:
+  = @icon.term
+%p
+  %b Filename:
+  = @icon.filename
+
+= link_to 'Edit', edit_icon_path(@icon)
+\|
+= link_to 'Back', icons_path
