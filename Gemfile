@@ -43,3 +43,7 @@ group :development do
   gem 'guard'
   gem 'guard-livereload'
 end
+
+group :production do
+  gem 'pg'
+end
