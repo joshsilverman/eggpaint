@@ -1,6 +1,7 @@
 class IconsController < ApplicationController
 
   def load
+    Icons.all.delete
     Dir.glob('app/assets/images/icons/*.png') do |rb_file|
       icon = Icon.new
       file_match = /\/([^\/]*)\.png/.match(rb_file)
